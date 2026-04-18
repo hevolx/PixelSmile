@@ -102,7 +102,7 @@ function drawVerticalLine(
  * @returns `true` if `0 <= x < imageWidth` and `0 <= y < imageHeight`, `false` otherwise.
  */
 function isPointInImage(x: number, y: number) {
-  return x >= 0 && x < imageWidth && y >= 0 && y < imageHeight;
+  return Number.isInteger(x) && Number.isInteger(y) && x >= 0 && x < imageWidth && y >= 0 && y < imageHeight;
 }
 
 /**
